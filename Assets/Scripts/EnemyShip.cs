@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class EnemyShip : Ship
 {    
-    [SerializeField] private Transform target;
+    private Transform target;
     [SerializeField] private float distanceToTarget = 5f;
 
     protected override void Start()
     {
+        target = FindObjectOfType<PlayerShip>().transform;        
         base.Start();        
     }
 

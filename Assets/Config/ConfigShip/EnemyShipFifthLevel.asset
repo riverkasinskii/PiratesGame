@@ -9,9 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ae1d5553fbedde4abf77dad6733fa8c, type: 3}
-  m_Name: EnemyProjectile
+  m_Script: {fileID: 11500000, guid: ab8c3ba7cf1d56141aa729eb6cebf75c, type: 3}
+  m_Name: EnemyShipFifthLevel
   m_EditorClassIdentifier: 
-  shipTag: Enemy
-  prefab: {fileID: 3902336850148306763, guid: 7112ebfec64e6f14fb8b1974b18f4c40, type: 3}
-  size: 10
+  movementSpeed: 1
+  angleOffset: 90
+  rotationSpeed: 3
+  reloadTime: 2
+  maxHealth: 200
+  pointsForKill: 200

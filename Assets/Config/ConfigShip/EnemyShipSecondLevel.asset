@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab8c3ba7cf1d56141aa729eb6cebf75c, type: 3}
-  m_Name: EnemyShip
+  m_Name: EnemyShipSecondLevel
   m_EditorClassIdentifier: 
-  movementSpeed: 1
+  movementSpeed: 2
   angleOffset: 90
   rotationSpeed: 2
-  reloadTime: 5
-  maxHealth: 30
-  pointsForKill: 20
+  reloadTime: 4
+  maxHealth: 50
+  pointsForKill: 50
+  sprite: {fileID: 21300000, guid: 44547e3b59acacc468620adec3497ac7, type: 3}
+  sizeShip: {x: 1.2, y: 1.2}

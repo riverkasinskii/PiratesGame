@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Projectile Pool", menuName = "CreatePool")]
+[CreateAssetMenu(fileName = "Projectile Pool", menuName = "CreateProjectilePool")]
 public class Pool : ScriptableObject
 {
     public string shipTag;

@@ -34,7 +34,7 @@ public class PlayerShip : Ship
         SetAngle(Camera.main.ScreenToWorldPoint(Input.mousePosition));
         if (timer <= 0)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 Shoot();
                 timer = shipConfig.reloadTime;

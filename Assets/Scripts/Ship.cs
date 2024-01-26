@@ -26,8 +26,8 @@ public abstract class Ship : MonoBehaviour
 
     protected virtual void Start()
     {
-        currentHealth = shipConfig.maxHealth;
         ui = FindObjectOfType<UI>();
+        currentHealth = shipConfig.maxHealth;
         timer = shipConfig.reloadTime;
         projectilePooler = ProjectilePooler.Instance;
     }

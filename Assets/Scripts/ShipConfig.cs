@@ -8,5 +8,5 @@ public class ShipConfig : ScriptableObject
     public float rotationSpeed;
     public float reloadTime;
     public int maxHealth;
-    public int pointsForKill;
+    public int pointsForKill;    
 }
