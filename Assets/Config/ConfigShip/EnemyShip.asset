@@ -16,3 +16,5 @@ MonoBehaviour:
   angleOffset: 90
   rotationSpeed: 2
   reloadTime: 5
+  maxHealth: 30
+  pointsForKill: 20

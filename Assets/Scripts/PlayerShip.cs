@@ -1,7 +1,25 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerShip : Ship
 {
+    public override void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        ui.UpdateHp(currentHealth);
+        if (currentHealth <= 0)
+        {
+            Stats.ResetAllStats();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
+
+    protected override void Start()
+    {
+        base.Start();
+        ui.UpdateHp(currentHealth);
+    }
+
     protected override void Move()
     {        
         transform.Translate(Input.GetAxis("Vertical") * 
@@ -26,5 +44,5 @@ public class PlayerShip : Ship
         {
             timer -= Time.deltaTime;
         }
-    }
+    }        
 }

@@ -18,7 +18,7 @@ public class Projectile : MonoBehaviour
         Ship ship = collision.gameObject.GetComponent<Ship>();
         if (ship != null && !collision.gameObject.CompareTag(myTag))
         {
-            //ship.TakeDamage(damage);
+            ship.TakeDamage(damage);
             gameObject.SetActive(false);           
         }
         else

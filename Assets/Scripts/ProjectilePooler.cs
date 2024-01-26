@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectPooler : MonoBehaviour
+public class ProjectilePooler : MonoBehaviour
 {    
-    public static ObjectPooler Instance;
+    public static ProjectilePooler Instance;
     public void Awake()
     {
         Instance = this;
