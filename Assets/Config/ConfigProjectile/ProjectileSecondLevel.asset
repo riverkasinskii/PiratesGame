@@ -9,14 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab8c3ba7cf1d56141aa729eb6cebf75c, type: 3}
-  m_Name: EnemyShipSecondLevel
+  m_Script: {fileID: 11500000, guid: fbc8282584602f046ab743e648ab8035, type: 3}
+  m_Name: ProjectileSecondLevel
   m_EditorClassIdentifier: 
   shipTag: SecondLevel
-  movementSpeed: 2
-  angleOffset: 90
-  rotationSpeed: 2
-  reloadTime: 4
-  maxHealth: 50
-  pointsForKill: 50
-  projectile: {fileID: 11400000, guid: 72662181fa54c584bb9336949de0c72c, type: 2}
+  prefab: {fileID: 8019102524283435504, guid: 6910cf51a7bcfa7409dd33151e33a708, type: 3}
+  size: 10

@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab8c3ba7cf1d56141aa729eb6cebf75c, type: 3}
   m_Name: PlayerShip
   m_EditorClassIdentifier: 
+  shipTag: Player
   movementSpeed: 5
   angleOffset: 90
   rotationSpeed: 2
   reloadTime: 0.5
   maxHealth: 100
   pointsForKill: 0
+  projectile: {fileID: 11400000, guid: 0643db26257eee34e9b2176a69d9a3b4, type: 2}

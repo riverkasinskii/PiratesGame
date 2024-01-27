@@ -9,19 +9,19 @@ public class ProjectilePooler : MonoBehaviour
         Instance = this;
     }
 
-    public List<Pool> pools;
-    public Dictionary<string, Queue<GameObject>> poolDictionary;
+    public List<ProjectileConfig> config;
+    private Dictionary<string, Queue<GameObject>> poolDictionary;
 
     private void Start()
     {
         poolDictionary = new Dictionary<string, Queue<GameObject>>();
 
-        foreach (var pool in pools)
+        foreach (var pool in config)
         {
             Queue<GameObject> objectPool = new();
             for (int i = 0; i < pool.size; i++)
             {
-                GameObject obj = Instantiate(pool.prefab);
+                GameObject obj = Instantiate(pool.prefab);                
                 obj.SetActive(false);
                 objectPool.Enqueue(obj);
             }

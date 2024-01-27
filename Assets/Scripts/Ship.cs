@@ -48,6 +48,6 @@ public abstract class Ship : MonoBehaviour
 
     protected void Shoot()
     {        
-        projectilePooler.SpawnFromPool(gameObject.tag, shootPoint.position, transform.rotation);
+        projectilePooler.SpawnFromPool(shipConfig.projectile.shipTag, shootPoint.position, transform.rotation);
     }        
 }

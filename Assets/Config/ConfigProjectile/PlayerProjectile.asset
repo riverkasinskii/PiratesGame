@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ae1d5553fbedde4abf77dad6733fa8c, type: 3}
-  m_Name: EnemyPoolProjectiles
+  m_Script: {fileID: 11500000, guid: fbc8282584602f046ab743e648ab8035, type: 3}
+  m_Name: PlayerProjectile
   m_EditorClassIdentifier: 
-  shipTag: Enemy
-  prefab: {fileID: 3902336850148306763, guid: 7112ebfec64e6f14fb8b1974b18f4c40, type: 3}
-  size: 10
+  shipTag: Player
+  prefab: {fileID: 1651950882971113403, guid: e0c9512b0823a9d4da2847b20fd4679f, type: 3}
+  size: 50

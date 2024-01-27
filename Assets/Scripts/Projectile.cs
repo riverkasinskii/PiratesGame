@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    [SerializeField] private int speed = 5;
+    [SerializeField] int speed = 5;
     [SerializeField] private int damage = 5;
     [SerializeField] private string myTag = string.Empty;
 
-    private readonly float timeBeforeDestroy = 3f;
+    private readonly float timeBeforeDestroy = 5f;
 
     private void Update()
     {
