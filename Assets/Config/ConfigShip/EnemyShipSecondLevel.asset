@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab8c3ba7cf1d56141aa729eb6cebf75c, type: 3}
   m_Name: EnemyShipSecondLevel
   m_EditorClassIdentifier: 
-  shipTag: SecondLevel
   movementSpeed: 2
   angleOffset: 90
   rotationSpeed: 2
-  reloadTime: 4
+  reloadTime: 6
   maxHealth: 50
   pointsForKill: 50
   projectile: {fileID: 11400000, guid: 72662181fa54c584bb9336949de0c72c, type: 2}

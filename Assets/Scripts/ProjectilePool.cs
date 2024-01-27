@@ -1,17 +1,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectilePooler : MonoBehaviour
+public class ProjectilePool : MonoBehaviour
 {    
-    public static ProjectilePooler Instance;
+    public static ProjectilePool Instance;
+    public List<ProjectileConfig> config;
+
+    private Dictionary<string, Queue<GameObject>> poolDictionary;
+
     public void Awake()
     {
         Instance = this;
     }
-
-    public List<ProjectileConfig> config;
-    private Dictionary<string, Queue<GameObject>> poolDictionary;
-
+        
     private void Start()
     {
         poolDictionary = new Dictionary<string, Queue<GameObject>>();
@@ -26,7 +27,7 @@ public class ProjectilePooler : MonoBehaviour
                 objectPool.Enqueue(obj);
             }
 
-            poolDictionary.Add(pool.shipTag, objectPool);
+            poolDictionary.Add(pool.tag, objectPool);
         }
     }
 

@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab8c3ba7cf1d56141aa729eb6cebf75c, type: 3}
   m_Name: EnemyShipFifthLevel
   m_EditorClassIdentifier: 
-  shipTag: FifthLevel
   movementSpeed: 1
   angleOffset: 90
   rotationSpeed: 3
-  reloadTime: 2
+  reloadTime: 3
   maxHealth: 200
   pointsForKill: 200
   projectile: {fileID: 11400000, guid: da843048467fb5e47ba8862d4ae4a1ca, type: 2}

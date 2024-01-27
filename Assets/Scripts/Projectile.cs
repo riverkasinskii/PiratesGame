@@ -7,12 +7,9 @@ public class Projectile : MonoBehaviour
     [SerializeField] private int damage = 5;
     [SerializeField] private string myTag = string.Empty;
 
-    private readonly float timeBeforeDestroy = 5f;
+    private readonly float timeBeforeDestroy = 2f;
 
-    private void Update()
-    {
-        transform.Translate(speed * Time.deltaTime * Vector2.down);
-    }
+    private void Update() => transform.Translate(speed * Time.deltaTime * Vector2.down);
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

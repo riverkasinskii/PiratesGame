@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbc8282584602f046ab743e648ab8035, type: 3}
   m_Name: ProjectileSecondLevel
   m_EditorClassIdentifier: 
-  shipTag: SecondLevel
+  tag: SecondLevel
   prefab: {fileID: 8019102524283435504, guid: 6910cf51a7bcfa7409dd33151e33a708, type: 3}
   size: 10

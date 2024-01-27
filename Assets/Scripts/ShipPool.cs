@@ -2,48 +2,53 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShipSpawner : MonoBehaviour
+public class ShipPool : MonoBehaviour
 {
     [SerializeField] private List<GameObject> shipViewPrefab;
     [SerializeField] private int countShip = 5;
     [SerializeField] private List<Transform> spawnPoints;
-    [SerializeField] private float spawnTime = 4f;
 
+    [Range(2, 10)]
+    [SerializeField] private float spawnTime;
+    
     private List<GameObject> poolShips;
 
     private void Start()
     {
+        InitializePool();
+        StartCoroutine(SpawnShip());
+    }
+
+    private void InitializePool()
+    {
         poolShips = new List<GameObject>();
         for (int i = 0; i < shipViewPrefab.Count; i++)
         {
-            GameObject ship = Instantiate(shipViewPrefab[i]);
-            ship.SetActive(false);
             for (int j = 0; j < countShip; j++)
             {
+                GameObject ship = Instantiate(shipViewPrefab[i]);
+                ship.SetActive(false);
                 poolShips.Add(ship);
             }
-        }        
-        StartCoroutine(SpawnShip());
+        }
     }
 
     private IEnumerator SpawnShip()
     {        
         while (true)
-        {
-            int limit;
-            if (Stats.Level < shipViewPrefab.Count)
-            {
-                limit = Stats.Level;
+        {       
+            GameObject ship = poolShips[Random.Range(0, poolShips.Count)];
+            if (!ship.activeSelf)
+            { 
+                ship.transform.SetPositionAndRotation(
+                spawnPoints[Random.Range(0, spawnPoints.Count)].position,
+                Quaternion.identity);    
+                ship.SetActive(true);                
             }
             else
             {
-                limit = shipViewPrefab.Count;
-            }          
-            GameObject ship = poolShips[Random.Range(0, poolShips.Count)];
-            ship.transform.SetPositionAndRotation(
-                spawnPoints[Random.Range(0, spawnPoints.Count)].position,
-                Quaternion.identity);
-            ship.SetActive(true);
+                continue;
+            }
             yield return new WaitForSeconds(spawnTime);
         }
     }

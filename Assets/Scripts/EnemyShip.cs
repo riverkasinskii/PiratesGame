@@ -18,6 +18,7 @@ public class EnemyShip : Ship
             Move();
         }
         SetAngle(target.position);
+
         if (timer <= 0)
         {
             Shoot();

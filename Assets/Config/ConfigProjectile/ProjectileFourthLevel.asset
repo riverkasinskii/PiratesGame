@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbc8282584602f046ab743e648ab8035, type: 3}
   m_Name: ProjectileFourthLevel
   m_EditorClassIdentifier: 
-  shipTag: FourthLevel
+  tag: FourthLevel
   prefab: {fileID: 8019102524283435504, guid: b527da539bec1644298972a5c610b371, type: 3}
   size: 10

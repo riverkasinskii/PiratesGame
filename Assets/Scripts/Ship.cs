@@ -10,7 +10,7 @@ public abstract class Ship : MonoBehaviour
     protected UI ui;    
     protected int currentHealth;
 
-    private ProjectilePooler projectilePooler;
+    private ProjectilePool projectilePool;
 
     public virtual void TakeDamage(int damage)
     {
@@ -19,7 +19,7 @@ public abstract class Ship : MonoBehaviour
         {
             Stats.Score += shipConfig.pointsForKill;
             ui.UpdateScoreAndLevel();
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
         print(currentHealth);
     }
@@ -29,7 +29,7 @@ public abstract class Ship : MonoBehaviour
         ui = FindObjectOfType<UI>();
         currentHealth = shipConfig.maxHealth;
         timer = shipConfig.reloadTime;
-        projectilePooler = ProjectilePooler.Instance;
+        projectilePool = ProjectilePool.Instance;
     }
 
     protected virtual void Move()
@@ -48,6 +48,6 @@ public abstract class Ship : MonoBehaviour
 
     protected void Shoot()
     {        
-        projectilePooler.SpawnFromPool(shipConfig.projectile.shipTag, shootPoint.position, transform.rotation);
+        projectilePool.SpawnFromPool(shipConfig.projectile.tag, shootPoint.position, transform.rotation);
     }        
 }
