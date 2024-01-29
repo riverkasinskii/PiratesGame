@@ -2575,6 +2575,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6f22009fe078ceb48a590dbf05b63498, type: 2}
   - {fileID: 11400000, guid: 72662181fa54c584bb9336949de0c72c, type: 2}
   - {fileID: 11400000, guid: 9328ac8c2ea738342b71c0bbf850acd0, type: 2}
+  ship: {fileID: 7008648891830186639}
 --- !u!1 &455759935
 GameObject:
   m_ObjectHideFlags: 0
@@ -10907,7 +10908,7 @@ GameObject:
   - component: {fileID: 1371963772}
   - component: {fileID: 1371963771}
   m_Layer: 0
-  m_Name: ShipSpawner
+  m_Name: ShipPooler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13464,6 +13465,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e23f1fa67464724890da35613ee2e21, type: 3}
+--- !u!114 &7008648891830186639 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2456120847008777468, guid: 7e23f1fa67464724890da35613ee2e21, type: 3}
+  m_PrefabInstance: {fileID: 7008648891830186638}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3edecb9d073d72d49b711ff82292fc59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

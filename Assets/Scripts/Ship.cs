@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public abstract class Ship : MonoBehaviour
-{    
+{
     public ShipConfig shipConfig;
 
     [SerializeField] private Transform shootPoint;    
